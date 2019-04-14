@@ -16,8 +16,6 @@ rp('https://www.travel-advisory.info/api', (error, res, body) => {
     app.locals.safety.push(body);
     const combined = cleanData(app.locals.safety, app.locals.vaccines)
     app.locals.all.push(combined)
-  } else {
-    console.log(error)
   }
 });
 
