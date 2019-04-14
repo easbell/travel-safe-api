@@ -4,7 +4,7 @@ export const cleanData = (safety, vaccines)=> {
     Object.keys(parsedSafety).filter(safetyCountry => {
       if(safetyCountry === vaccObj) {
         return (
-          acc.push({name: parsedSafety[safetyCountry].name, rating: parsedSafety[safetyCountry].advisory.score, vaccines: vaccines[vaccObj]})
+          acc.push({name: parsedSafety[safetyCountry].name, rating: parsedSafety[safetyCountry].advisory.score, vaccines: vaccines[vaccObj], id: safetyCountry})
         )
       }
     });
